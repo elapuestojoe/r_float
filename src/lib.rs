@@ -1,7 +1,7 @@
 use num::Float as SubFloat;
 use rand::Rng;
 
-pub trait Float: SubFloat {
+pub trait Float: SubFloat + Sized {
     fn random() -> Self;
     fn random_range(low: Self, high: Self) -> Self;
     fn from_i32(i: i32) -> Self;
